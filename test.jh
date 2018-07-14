@@ -1,0 +1,31 @@
+
+
+enum Type {
+	STRING, INTEGER, DATE, BOOLEAN
+}
+
+entity Metadata {
+	code String,
+    value String
+}
+
+entity AttributeEntity {
+	code String,
+    value String,
+    type Type,
+    metadata String	 /** EMBEDDED */
+}
+
+entity Person {
+   partyId       						String 	required
+   attributes							String  /** EMBEDDED */
+}
+
+entity Party {
+   contextId                           String  required,
+   partyId       						String 	required,
+   attributes							String, /** EMBEDDED */
+   listOfRoles    						String, /** DBREF PartyRoles*/
+   listOfIdentifications 				String, /** EMBED PartyIdentification*/
+   listOfNames           				String 	/** EMBED PartyName*/
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Party",
+    "fields": [
+        {
+            "fieldName": "contextId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "partyId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "attributes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "listOfRoles",
+            "javadoc": "EMBEDDED",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "listOfIdentifications",
+            "javadoc": "DBREF PartyRoles",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "listOfNames",
+            "javadoc": "EMBED PartyIdentification",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180713162742",
+    "entityTableName": "party",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
